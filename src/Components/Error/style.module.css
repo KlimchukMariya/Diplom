@@ -1,0 +1,27 @@
+.errorContainer {
+    position: relative;
+    background-color: #1a202c;
+    /* dark:bg-black */
+    top: 0;
+    left: 0;
+    width: 100vw;
+}
+
+.errorContent {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: flex-end;
+}
+
+.errorIcon {
+    color: #ff0000;
+    font-size: 32px;
+}
+
+.errorMessage {
+    font-family: 'Roboto', sans-serif;
+    /* font-roboto */
+    color: #333;
+    /* dark:text-gray-300 text-gray-900 */
+}

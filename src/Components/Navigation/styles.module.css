@@ -1,0 +1,27 @@
+
+/* 
+.navigation {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    padding: 20px;
+  
+}
+
+.navItem {
+    margin-bottom: 10px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navItem:hover {
+    background-color: #ddd;
+} */
+
+.navigation {
+    display: flex;
+    gap: 1rem;
+
+}

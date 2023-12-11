@@ -1,0 +1,112 @@
+/* Filters.module.css */
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.filtersContainer {
+    background-color: #242426;
+    color: white;
+    width: 518px;
+    height: 100%;
+    padding: 40px;
+    border-radius: var(--radius);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header h2 {
+    margin: 0;
+}
+.closeButton{
+    background: transparent;
+    color: var(--contextual-colors-light, #AFB2B6);
+    width: 24px;
+    height: 24px;
+}
+
+.filtersSection {
+    margin-bottom: 20px;
+}
+
+.filtersSection h3 {
+    margin-bottom: 10px;
+}
+
+/* .filterButton {
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    padding: 10px 15px;
+    border: none;
+    border-radius: var(--radius);
+    margin-right: 10px;
+    cursor: pointer;
+} */
+
+.filterButton {
+    width: 217px;
+    height: 52px;
+    flex-shrink: 0;
+    fill: var(--background-colors-dark, #242426);
+    /* Дополнительные стили по вашему усмотрению */
+}
+.line {
+    width: 438px;
+    height: 1px;
+    background: var(--background-colors-graphite, #323537);
+    margin-top: 32px;
+}
+
+.input {
+    width: 100%;
+    /* padding: 10px; */
+    border: 1px solid #ccc;
+    border-radius: var(--radius); 
+    margin-bottom: 20px;
+}
+
+.clearButton,
+.showResultsButton {
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    padding: 10px 15px;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+}
+
+.clearButton {
+    margin-right: 10px;
+}
+
+.ratingContainer {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.space {
+    width: 40px;
+}
+
+.clearButton,
+.showResultsButton {
+    width: 199px;
+    height: 56px;
+    flex-shrink: 0;
+    /* Дополнительные стили по вашему усмотрению */
+}
