@@ -1,63 +1,57 @@
-/* Footer.module.css */
 
 .footer {
     background-image: linear-gradient(rgba(0, 0, 0, 0.075), rgba(0, 0, 0, 0.075)),
         url("../../images/footer-bg.webp");
     background-position: center;
     background-size: cover;
-    height: 370px;
+    /* height: 150px; */
+    margin-top: 20px;
 }
 
 .footerContent {
     max-width: 1140px;
     margin: 0 auto;
-    padding: 0 8px;
-    /* md:px-8 */
-    padding: 0 6px;
-    /* sm:px-6 */
-    padding: 0 4px;
-    /* px-4 */
-    padding: 0;
-    /* xl:px-0 */
+    padding: 10px 0 15px;
 }
 
 .footerLinks {
-    grid-template-columns: repeat(3, 1fr);
-  
-   
-    gap: 4px;
-    /* md:gap-4 */
-    gap: 2px;
-    /* sm:gap-2 */
-    gap: 6px;
-    /* xs:gap-[6px] */
-    gap: 1px;
-    /* gap-1 */
+    list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        padding-bottom: 10px;
 }
 
 .footerLinksItem {
     text-align: center;
 }
+.footerItem {
+    text-align: center;
+}
 
 .footerLink {
-    &:hover {
-        color: #e53e3e;
-        /* hover:text-primary */
-        text-decoration: underline;
-        /* hover:underline */
-    }
-
-    transition: all 0.3s;
-    /* transition-all duration-300 */
-    font-size: 15.25px;
-    /* md:text-[15.25px] */
-    font-size: 14.75px;
-    /* sm:text-[14.75px] */
-    font-size: 12.75px;
-    /* xs:text-[12.75px] */
+    color: #ccc;
+    text-decoration: none;
     font-size: 12px;
-    /* text-[12px] */
-    font-family: 'Nunito',
-    sans-serif;
-    /* font-nunito */
+    font-family: 'Nunito', sans-serif;
+    transition: all 0.3s ease;
+    margin-bottom: 10px;
 }
+
+.footerLink:hover {
+    color:red;
+    text-decoration: underline;
+        transition: all ease-in .3s;
+}
+ .logo {
+     width: 60px;
+     padding: 10px 0;
+     transition: opacity 0.3s linear;
+ }
+
+ .logo:hover {
+     transition: opacity 0.3s linear;
+     opacity: 0.7;
+ }

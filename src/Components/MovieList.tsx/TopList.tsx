@@ -4,14 +4,13 @@ import { useDispatch } from 'react-redux';
 import { Link, useLocation } from 'react-router-dom';
 import { useTypedSelector } from '../Hooks/useTupesSelector';
 import { resetMovieStateAction } from '../../store/actionCreators/singleMovieActionCreatora';
-import { fetchTopMovies } from '../../utils/api';
-import { MAIN_PAGE, MOVIE_PAGE, MOVIES_ALL, SEARCH_PAGE } from '../../utils/constants';
+import { fetchTV } from '../../utils/api';
+import { MAIN_PAGE, MOVIE_PAGE,  SEARCH_PAGE, TOP_PAGE } from '../../utils/constants';
 import MovieCard from '../movieCard/MovieCard';
 import SkeletonCard from '../Skeletons/SkeletonCard/SkeletonCard';
 import styles from './styles.module.css';
 
-const MoviesList: React.FC = () => {
-  
+const TopList: React.FC = () => {
   const location = useLocation();
   const { isTopMoviesLoading, topMovies, currentPage } = useTypedSelector(
     (state) => state.topMovies
@@ -23,9 +22,8 @@ const MoviesList: React.FC = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const actionFunction = fetchTopMovies(currentPage);
-       console.log (actionFunction)
-    
+      const actionFunction = fetchTV(currentPage);
+      console.log (actionFunction)
       await actionFunction(dispatch);
     };
 
@@ -59,12 +57,12 @@ const MoviesList: React.FC = () => {
           }
 
           {isTopMoviesLoading &&
-            (location.pathname === MAIN_PAGE || location.pathname === `/${MOVIES_ALL}`) &&
+            (location.pathname === MAIN_PAGE || location.pathname === `/${TOP_PAGE}`) &&
             topMovies.map((item) => <SkeletonCard key={item.filmId} />)
           }
 
           {!isTopMoviesLoading &&
-            (location.pathname === MAIN_PAGE || location.pathname === `/${MOVIES_ALL}`) &&
+            (location.pathname === MAIN_PAGE || location.pathname === `/${TOP_PAGE}`) &&
             topMovies.map((movie) => (
               <li key={movie.filmId} className={styles.listItem}>
                 <Link
@@ -83,5 +81,5 @@ const MoviesList: React.FC = () => {
   );
 };
 
-export default MoviesList;
+export default TopList;
 

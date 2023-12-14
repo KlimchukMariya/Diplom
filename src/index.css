@@ -12,10 +12,30 @@
   --tw-bg-opacity: 1;
 
 }
+.App {
+  text-align: center;
+}
 
-/* @import 'tailwindcss/base'; */
-/* @import 'tailwindcss/components';
-@import 'tailwindcss/utilities'; */
+
+
+.App-header {
+  background-color: #000000;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+
+
+
+header {
+  display: flex;
+  justify-content: space-around;
+}
 
 *,
 *::after,
@@ -84,3 +104,11 @@ ul {
 li {
   display: block;
 }
+
+svg {
+    display: block;
+    
+      
+}
+
+

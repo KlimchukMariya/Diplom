@@ -37,20 +37,20 @@ export type MovieActions =
 
 export interface IMovie {
   filmId: number;
-  nameRu: string;
+  nameRu?: string;
   nameEn: string;
   webUrl: string;
   posterUrl: string;
-  posterUrlPreview: string;
+  posterUrlPreview?: string;
   year: number;
-  filmLength: string;
-  slogan: string;
-  description: string;
-  type: string;
-  countries: { country: string }[];
-  genres: { genre: string }[];
-  rating: IMovieRating;
-  images: IMovieImages;
+  filmLength?: string;
+  slogan?: string;
+  description?: string;
+  type?: string;
+  countries?: { country: string }[];
+  genres?: { genre: string }[];
+  rating?: IMovieRating;
+  images?: IMovieImages;
   [key: string]: any;
 }
 interface IMovieRating {

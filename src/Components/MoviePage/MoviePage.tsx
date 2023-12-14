@@ -8,13 +8,16 @@ import Genres from '../Genres/Genres';
 import Message from '../Message/Message';
 import GoBackLink from '../GoBackLink/GoBackLink';
 import SkeletonMoviePage from '../Skeletons/SkeletonMoviePage/SkeletonMoviePage';
+import SimilarMovie from '../SimilarMovie/SimilarMovie';
 
 interface IMovieProps {
   filmId: string;
 }
 
+ 
 const MoviePage: React.FC = () => {
   const { filmId } = useParams<IMovieProps>();
+ 
   const dispatch = useDispatch();
   const { isLoading, movie, movieError } = useTypedSelector((state) => state.singleMovie);
   const { nameRu, nameEn, description, posterUrl, posterUrlPreview, year, genres, filmLength } =
@@ -25,6 +28,7 @@ const MoviePage: React.FC = () => {
   }, [filmId, dispatch]);
 
   return (
+    <>
     <section className={styles.section}>
       <div className={styles.backgroundImage} style={{ backgroundImage: `url(${posterUrl})` }} />
 
@@ -59,7 +63,13 @@ const MoviePage: React.FC = () => {
           </div>
         </div>
       )}
+
+        <section className={styles.similarFilms} >
+      <SimilarMovie filmId={filmId} />
     </section>
+    </section>
+  
+    </>
   );
 };
 

@@ -1,5 +1,7 @@
 import { IMovie } from './movieTypes';
 
+
+
 export interface ITopMovieState {
   topMovies: IMovie[];
   isTopMoviesLoading: boolean;
@@ -45,3 +47,7 @@ export type TopMovieAction =
   | ISetTopMoviePage
   | ITopMoviesError
   | IFetchTopMoviesFinishedAction;
+
+
+
+  

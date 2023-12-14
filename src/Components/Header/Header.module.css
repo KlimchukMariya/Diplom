@@ -1,10 +1,11 @@
 .header {
     height: 80px;
-    margin-bottom: 20px;
+   margin-bottom: 20px;
     background: rgba(254, 254, 254, .7);
     -webkit-backdrop-filter: blur(30px);
     backdrop-filter: blur(30px);
     box-shadow: 0 4px 30px #00000013; 
+    
 }
 
  [data-theme='dark'] .header {
@@ -15,40 +16,31 @@
 }
 
 .container--header {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: inherit;
+    padding: 20px 0;
    
 }
 
-.logo{
-    grid-column: 1;
-    padding: 10px;
-        cursor: pointer;
-        border-radius: 5px;
-      text-align: center;
+ .logo {
+     width: 60px;
+     padding: 10px 0;
+     transition: opacity 0.3s linear;
  }
- .searchControl--header {
-     grid-column: 2 / span 2;
-     position: relative;
-      /* Занимает 3 колонки начиная со второй */
- } 
 
-.filterButton {
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    /* Расстояние от правой границы родителя */
-    transform: translateY(-50%);
-   
-     cursor: pointer;
+ .logo:hover {
+     transition: opacity 0.3s linear;
+     opacity: 0.7;
+ }
 
-     background-color: transparent;
-     border: none;
-    
-   
+
+ .nav {
+    display: flex;
+    align-items: center
+
+
  }
 
  .searchIcon {
@@ -56,10 +48,6 @@
      width: 24px;
      height: 24px;
  }
-.btn-theme{
-        background: transparent;
-        font-size: 26px;
-}
 
 
 

@@ -4,7 +4,7 @@ import { useThemeContext } from '../../context/theme/useThemeContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon as farMoon } from '@fortawesome/free-regular-svg-icons';
 import { faSun } from '@fortawesome/free-solid-svg-icons'; 
-import styles from './Header.module.css';
+import styles from './styles.module.css';
 
 const ThemeToggle = () => {
   const { theme, changeTheme } = useThemeContext();

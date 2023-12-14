@@ -7,22 +7,8 @@ import Footer from "../../Components/Footer/footer";
 import { Provider } from 'react-redux';
 import  store  from '../../store'
 
-// const MainLayout = () => {
-//   return (
-//    <>
-//       <Header />
-//          <div className={`container ${styles['container--section']}`}>
-//          <Navigation />
-//                <div>
-//                   <Outlet />
-//                </div>
-//          </div>
-//           <Footer />
-//    </>
-//   );
-// };
 
-// export default MainLayout;
+
 
 const MainLayout = () => {
   return (
@@ -34,7 +20,6 @@ const MainLayout = () => {
         <Outlet />  
           </div>
         <Footer />
-      
       </>
     </Provider>
   );

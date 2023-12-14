@@ -1,12 +1,14 @@
 import React from "react";
 import { useTypedSelector } from "../../Components/Hooks/useTupesSelector";
-import MovieList from "../../Components/MovieList.tsx/MovieList";
+
 import Pagination from "../../Components/Pagination/Pagination";
-import { NO_SEARCH_RESULTS_MESSAGE, NO_SEARCH_YET_MESSAGE, SEARCH_PAGE } from "../../utils/constants";
+import { NO_SEARCH_RESULTS_MESSAGE, NO_SEARCH_YET_MESSAGE } from "../../utils/constants";
 import MoviesList from "../../Components/MovieList.tsx/MovieList";
 import Message from "../../Components/Message/Message";
+// import GoBackLink from "../../Components/GoBackLink/GoBackLink";
+import SearchForm from "../../Components/SearchForm.tsx/SearchForm";
 
-// SearchResultsWrapper.tsx (новый компонент для обертки результатов поиска)
+ 
 const SearchResultsWrapper: React.FC = () => {
   const { isSearchResultsLoading, searchResults, searchMovieError, keyword } =
     useTypedSelector((state) => state.searchResults);
@@ -15,6 +17,9 @@ const SearchResultsWrapper: React.FC = () => {
     <>
       {Boolean(searchResults.length) && (
         <>
+        
+         {/* <GoBackLink text={'Назад'} /> */}
+         <SearchForm />
           <MoviesList />
           <Pagination />
         </>

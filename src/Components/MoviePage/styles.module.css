@@ -49,6 +49,7 @@
     font-weight: 500;
     font-size: 16px;
     color: #888888;
+    margin-bottom: 10px
 }
 
 .genresList {
@@ -75,7 +76,7 @@
     font-size: 16px;
     line-height: 24px;
     margin: 0;
-    padding: 0;
+    padding: 0 20px 0 0;
 }
 
 .message {
@@ -105,7 +106,10 @@
     transition: opacity 0.8s linear;
 }
 
-
+.similarFilms {
+    width: 100%;
+    margin: 0 auto;
+}
 @media screen and (min-width: 768px) {
     .section {
         display: flex;
@@ -114,6 +118,7 @@
 
     .title {
         padding-top: 0;
+        margin-bottom: 10px;
     }
 
     .poster {

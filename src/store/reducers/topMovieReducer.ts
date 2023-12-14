@@ -1,5 +1,6 @@
 import { ITopMovieState, TopMovieActionTypes, TopMovieAction } from '../../types/topMovieTypes';
 
+
 const initialState: ITopMovieState = {
   topMovies: [],
   isTopMoviesLoading: false,
